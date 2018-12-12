@@ -47,12 +47,6 @@ void standard()
  */
 
  ifp = fopen("/proc/cpuinfo","r");
- while (fgets(str,80,ifp) != NULL)
-  if (strstr(str,"vendor_id") || strstr(str,"model name"))
-   puts(str); 
- fclose (ifp);
-
- ifp = fopen("/proc/version","r");
  while ((ch = getc(ifp)) != EOF)
   putchar(ch);
  fclose (ifp);
